@@ -22,7 +22,15 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "Rubik", sans-serif;
   font-size: 18px;
   line-height: 30px;
@@ -48,6 +56,56 @@ body {
 .page-header {
   color: #000000;
   background: #FFE17F;
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+/* .navigation {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
+  margin: 0 auto;
+} */
+
+.navigation-logo {
+  display: block;
+  width: 145px;
+  margin-left: 60px;
+}
+
+.navigation-user {
+  display: flex;
+  width: 1040px;
+  margin: 0 auto;
+}
+
+.header-user {
+  width: 780px;
+  margin: 0 60px;
+  padding: 0;
+}
+
+.header-list {
+  max-width: 250px;
+  margin-left: auto;
+}
+
+.navigation-list {
+  padding: 0;
+  justify-content: space-between;
+}
+
+.navigation-item {
+  width: 127px;
+  margin-left: 45px;
+}
+
+.catalog-item {
+  width: 293px;
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .search-button-title {
@@ -67,6 +125,7 @@ body {
 .navigation-link {
   font-family: "Raleway", sans-serif;
   line-height: 21px;
+  letter-spacing: 3.6px;
   text-align: center;
   color: #000000;
   text-decoration: none;
@@ -81,6 +140,28 @@ body {
   text-align: center;
   color: #000000;
   text-decoration: none;
+}
+
+.main-container {
+  flex-grow: 1;
+}
+
+.page-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider {
+  width: 560px;
+}
+
+.promo-product {
+  width: 560px;
 }
 
 .promo-product-title {
@@ -100,6 +181,12 @@ body {
   text-align: center;
 }
 
+.catalog-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
 .catalog-menu-link {
   font-family: "Raleway", sans-serif;
   line-height: 24px;
@@ -114,7 +201,13 @@ body {
   color: #000000;
 }
 
-.info {
+.info-list {
+  background: #F0F0F0;
+  width: 287px;
+  padding: 0;
+}
+
+.description {
   background: #F0F0F0;
 }
 
@@ -177,6 +270,45 @@ body {
 .page-footer {
   color: #FFFFFF;
   background: #444444;
+}
+
+.page-footer-container {
+  display: flex;
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.footer-navigation-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-contacts {
+  width: 250px;
+  margin-right: 100px;
+}
+
+.navigation-footer {
+  display: flex;
+  justify-content: space-between;
+  width: 444px;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social-list {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-phone {
+  margin-left: auto;
+  max-width: 175px;
+  align-self: center;
 }
 
 .page-footer a {
