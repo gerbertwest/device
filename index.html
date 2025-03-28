@@ -43,7 +43,8 @@
         <ul class="navigation-user navigation-list">
           <li class="navigation-item catalog-item">
             <a class="navigation-link" href="catalog.html">
-              <span class="visually-hidden">Каталог товаров</span>
+              <span>Каталог товаров</span>
+              <span class="visually-hidden">Кнопка каталога товаров</span>
             </a>
           </li>
           <li class="navigation-item">
@@ -108,7 +109,7 @@
           </section>
         </div>
 
-        <section class="catalog">
+        <section class="index-columns catalog">
           <h2 class="visually-hidden">Меню каталога</h2>
           <ul class="catalog-menu">
             <li class="catalog-menu-card">
@@ -172,18 +173,19 @@
             </ul>
           </section>
           <section class="description">
-            <h2 class="info-title">Доставка</h2>
-            <span class="info-description">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</span>
-            <img class="info-logo" src="./img/delivery-image.svg" alt="силуэт человека с посылкой подмышкой, бегущего вперед" width="136" height="164">
+            <h2 class="description-title">Доставка</h2>
+            <span class="description-text">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</span>
+            <img class="description-logo" src="./img/delivery-image.svg" alt="силуэт человека с посылкой подмышкой, бегущего вперед" width="136" height="164">
           </section>
         </div>
 
-        <section class="advantage">
+        <section class="index-columns advantage">
           <h2 class="visually-hidden">Преимущество</h2>
-          <div class="index-columns">
+          <a class="index-columns advantage-link" href="#">
             <img class="advantage-logo" src="./img/delivery-logo.svg" alt="Едущий грузовичок доставки" width="125" height="100">
             <p class="advantage-description">Доставим редкий товар под заказ</p>
-          </div>
+            <img class="advantage-logo" src="./img/info.svg" alt="Символ информации i" width="125" height="100">
+          </a>
         </section>
 
         <div class="index-columns">
@@ -222,7 +224,7 @@
           </section>
         </div>
 
-        <section class="newsletter">
+        <section class="index-columns newsletter">
           <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
           <p class="newsletter-text">Еженедельный дайджест с обзорами новинок, длительными тест-драйвами, распаковками, а также акции, спецпредложения и вот это вот всё.</p>
           <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -233,9 +235,10 @@
             <button class="button newsletter-button" type="submit">
               <span class="visually-hidden">Подписаться</span>
             </button>
+            <img class="newsletter-logo" src="./img/сheck-mark.svg" alt="галочка">
+            <p class="newsletter-text">Это бесплатно</p>
           </form>
-          <img class="newsletter-logo" src="./img/сheck-mark.svg" alt="галочка">
-          <p class="newsletter-text">Это бесплатно</p>
+
         </section>
       </div>
     </main>
@@ -248,7 +251,7 @@
           <address class="footer-contacts-address">
             <p class="address-text">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           </address>
-          <img class="footer-contacts-logo" src="./img/line.svg" alt="горизонтальная желтая полоса" width="80" height="7">
+          <img class="footer-contacts-line" src="./img/line.svg" alt="горизонтальная желтая полоса" width="80" height="7">
         </section>
 
         <section class="footer-navigation-social">
@@ -256,13 +259,13 @@
 
           <h3 class="visually-hidden">Навигация</h3>
           <ul class="navigation-footer">
-            <li class="navigation-item navigation-footer">
+            <li class="navigation-footer-item">
               <a class="navigation-link" href="#">Доставка</a>
             </li>
-            <li class="navigation-item navigation-footer">
+            <li class="navigation-footer-item">
               <a class="navigation-link" href="#">Гарантия</a>
             </li>
-            <li class="navigation-item navigation-footer">
+            <li class="navigation-footer-item">
               <a class="navigation-link" href="#">Контакты</a>
             </li>
           </ul>
@@ -284,6 +287,7 @@
                 <img class="social-logo" alt="Логотип Twitter" src="./img/twitter-logo.svg" width="40" height="40">
               </a>
             </li>
+
           </ul>
         </section>
 
