@@ -61,7 +61,6 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 3.6px;
-  background-color: #FFFFFF;
 }
 
 .button-current {
@@ -447,6 +446,7 @@ body {
 
 .footer-phone {
   margin-left: auto;
+  margin-top: 78px;
   max-width: 175px;
   align-self: center;
 }
@@ -459,12 +459,25 @@ body {
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
+  margin-bottom: 63px;
+}
+
+.htmlacademy-link {
+  display: block;
+  width: 115px;
+  height: 33px;
+  margin-left: auto;
 }
 
 /*Страница каталога*/
 
-.main-inner {
-  padding-top: 35px;
+.inner-header-container {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.inner-header {
+  padding: 25px 60px;
 }
 
 .inner-header-title {
@@ -476,6 +489,10 @@ body {
   margin-bottom: 16px;
 }
 
+.catalog-page-container {
+  background-color: #F0F0F0;
+}
+
 .breadcrumbs {
   display: flex;
   margin: 0;
@@ -483,6 +500,7 @@ body {
   color: #000000;
   font-size: 16px;
   list-style-type: none;
+  line-height: 19px;
 }
 
 .breadcrumbs-link {
@@ -492,7 +510,6 @@ body {
 
 .catalog-products {
   display: flex;
-  padding-bottom: 78px;
 }
 
 .catalog-filter {
@@ -502,6 +519,8 @@ body {
 
 .catalog-right-column {
   width: 840px;
+  padding-bottom: 78px;
+  background-color: #FFFFFF;
 }
 
 .catalog-filter-label {
@@ -530,7 +549,7 @@ body {
 }
 
 .filter-container {
-  background: #F0F0F0;
+  padding: 25px 60px;
 }
 
 .sorting-container {
@@ -593,6 +612,8 @@ body {
   width: 100%;
   height: 55px;
   margin-bottom: 44px;
+  background-color: #FFFFFF;
+  border: 3px solid #E5E5E5;
 }
 
 .pagination {
