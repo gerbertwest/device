@@ -204,10 +204,6 @@ body {
   margin-bottom: 70px;
 }
 
-.index-columns:last-child {
-  margin-bottom: 0;
-}
-
 .slider {
   width: 560px;
 }
@@ -282,19 +278,66 @@ body {
 }
 
 .info {
-  padding-top: 64px;
-  padding-bottom: 65px;
+  position: relative;
+  display: flex;
+  z-index: 1;
+}
+
+.index-columns.info::after {
+  content: '';
+  background-color: #F0F0F0;
+  height: 289px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+.page-container.info {
+  padding-bottom: 72px;
+}
+
+.info-buttons {
+  margin-top: 64px;
 }
 
 .info-list {
   width: 287px;
   padding: 0;
+  margin: 0;
   list-style-type: none;
+  display: grid;
+  grid-template-rows: repeat(3, 40px);
+  gap: 35px;
+  justify-items: start;
 }
 
 .description {
-  padding-top: 72px;
-  padding-bottom: 72px;
+  padding-top: 72.5px;
+  padding-bottom: 72.5px;
+  padding-left: 116px;
+  padding-right: 63px;
+  display: grid;
+  grid-template-columns: 1fr 110px 136px;
+  grid-template-rows: auto 34px auto
+}
+
+.description-title {
+  margin: 0;
+  grid-column: 1 / 2;
+  grid-row: 1 /2;
+}
+
+.description-text {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.description-logo {
+  grid-column: 3 / 4;
+  grid-row: 1 / 4;
+  align-self: center;
 }
 
 .advantage {
