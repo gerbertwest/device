@@ -113,46 +113,54 @@
           <section class="slider">
             <h2 class="visually-hidden">Слайдер с промо товарами</h2>
             <img class="slider-image" src="./img/slider-1-copter.png" alt="Промо товары" width="560" height="560">
-            <button class="slider-button slider-prev" type="button">
-              <span class="visually-hidden">Предыдущий товар</span>
-            </button>
-            <button class="slider-button slider-next" type="button">
-              <span class="visually-hidden">Следующий товар</span>
-            </button>
+            <div class="slider-controls">
+              <button class="slider-button slider-prev" type="button">
+                <span class="visually-hidden">Предыдущий товар</span>
+              </button>
+              <button class="slider-button slider-next" type="button">
+                <span class="visually-hidden">Следующий товар</span>
+              </button>
+            </div>
           </section>
 
           <section class="promo-product">
             <h2 class="visually-hidden">Описание промо товаров</h2>
-            <!-- <span class="slider-number">01</span> -->
+            <span class="slider-number">01</span>
             <h3 class="promo-product-title">Порхает как бабочка, жалит как пчела!</h3>
             <p class="promo-product-description">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-            <a class="button" href="#">Подробнее</a>
 
-            <ol class="slider-pagination">
-              <li class="slider-pagination-item">
-                <button class="slider-pagination-button slider-pagination-button-current" type="button">
-                  <span class="visually-hidden">1 товар</span>
-                </button>
-              </li>
-              <li class="slider-pagination-item">
-                <button class="slider-pagination-button" type="button">
-                  <span class="visually-hidden">2 товар</span>
-                </button>
-              </li>
-              <li class="slider-pagination-item">
-                <button class="slider-pagination-button" type="button">
-                  <span class="visually-hidden">3 товар</span>
-                </button>
-              </li>
-            </ol>
+            <div class="slider-pagination-wraper">
+              <a class="button slider-button-more" href="#">Подробнее</a>
+
+              <ol class="slider-pagination">
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button slider-pagination-button-current" type="button">
+                    <span class="visually-hidden">1 товар</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">2 товар</span>
+                  </button>
+                </li>
+                <li class="slider-pagination-item">
+                  <button class="slider-pagination-button" type="button">
+                    <span class="visually-hidden">3 товар</span>
+                  </button>
+                </li>
+              </ol>
+            </div>
 
             <h2 class="visually-hidden">Характеристики промо товара</h2>
             <dl class="promo-product-feature">
-              <dt class="promo-product-feature-name">800 м</dt>
-              <dd class="promo-product-feature-value">Дальность полета</dd>
-
-              <dt class="promo-product-feature-name">50 м</dt>
-              <dd class="promo-product-feature-value">Радиус поражения</dd>
+              <div class="promo-product-feature-wraper">
+                <dt class="promo-product-feature-name">800 м</dt>
+                <dd class="promo-product-feature-value">Дальность полета</dd>
+              </div>
+              <div class="promo-product-feature-wraper">
+                <dt class="promo-product-feature-name">50 м</dt>
+                <dd class="promo-product-feature-value">Радиус поражения</dd>
+              </div>
             </dl>
           </section>
         </div>
