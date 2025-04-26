@@ -128,6 +128,8 @@ body {
 
 .search-button {
   display: inline-block;
+  box-sizing: border-box;
+  height: 40px;
   padding: 10px 56px;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
@@ -136,8 +138,7 @@ body {
   text-transform: none;
   background-color: #FFE17F;
   color: #000000;
-  outline: 2px solid #000000;
-  outline-offset: -2px;
+  border: 2px solid #000000;
   border-radius: 0 50px 50px 0;
 }
 
@@ -173,6 +174,7 @@ body {
 
 .catalog-icon {
   margin-left: auto;
+  opacity: 0.3;
 }
 
 .search-text {
@@ -202,7 +204,7 @@ body {
   width: 359px;
 }
 
-.navigation-link {
+.navigation-link, .catalog-link {
   font-family: "Raleway", sans-serif;
   line-height: 21px;
   letter-spacing: 3.2px;
@@ -210,11 +212,9 @@ body {
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 14px 0;
-  display: block;
 }
 
-.catalog-item .navigation-link {
+.catalog-item .catalog-link {
   display: flex;
   align-items: center;
   min-width: 50px;
@@ -245,7 +245,7 @@ body {
 }
 
 .header-link-basket {
-  padding-left: 25px;
+  padding-left: 43px;
 }
 
 .header-icon {
@@ -264,7 +264,7 @@ body {
 .header-link-basket .header-icon {
   position: absolute;
   right: auto;
-  left: -18px;
+  left: 0;
   margin: auto 0;
 }
 
@@ -275,6 +275,48 @@ body {
   left: 0;
   margin: auto 0;
 }
+
+/*Отработка состояний header*/
+
+.catalog-link:hover .catalog-icon{
+  opacity: 1;
+}
+
+.header-link:hover, .navigation-link:hover {
+  opacity: 0.6;
+}
+
+.search-button:hover {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.header-link:focus,
+.navigation-link:focus,
+.catalog-link:focus
+{
+  outline: 2px solid #AF4FFF;
+}
+
+.search-button:focus, .search-text-field:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+.header-link:active, .navigation-link:active {
+  opacity: 0.3;
+  outline: none;
+}
+
+.catalog-link:active{
+  outline: none;
+}
+
+.search-button:active .search-button-title {
+  opacity: 0.3;
+}
+
 
 /* Главная страница */
 
