@@ -118,7 +118,7 @@ body {
 
 .header-user {
   width: 780px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   list-style-type: none;
   display: flex;
@@ -128,7 +128,6 @@ body {
 
 .search-button {
   display: inline-block;
-  margin-right: 26px;
   padding: 10px 56px;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
@@ -144,8 +143,8 @@ body {
 
 .header-list {
   display: flex;
-  justify-content: end;
-  max-width: 250px;
+  justify-content: space-between;
+  max-width: 240px;
   margin-left: auto;
 }
 
@@ -172,8 +171,22 @@ body {
   margin-right: auto;
 }
 
+.catalog-icon {
+  margin-left: auto;
+}
+
 .search-text {
   margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  margin: auto 0;
+  left: 16px;
+  top: 0;
+  bottom: 0;
 }
 
 .search-text-field {
@@ -197,21 +210,21 @@ body {
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 14px 0;
+  display: block;
 }
 
 .catalog-item .navigation-link {
   display: flex;
   align-items: center;
   min-width: 50px;
-  min-height: 50px;
+  height: 50px;
+  padding: 0;
 }
 
 .search-form {
   display: flex;
-}
-
-.header-current {
-  opacity: 30%;
+  margin-right: 26px;
 }
 
 .header-link {
@@ -220,6 +233,47 @@ body {
   text-decoration: none;
   display: block;
   padding: 5px 0px;
+  position: relative;
+}
+
+.header-link-login {
+  padding-left: 27px;
+}
+
+.header-link-compare {
+  padding-left: 22px;
+}
+
+.header-link-basket {
+  padding-left: 25px;
+}
+
+.header-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.header-link-compare .header-icon {
+  position: absolute;
+  right: auto;
+  left: 0;
+  margin: auto 0;
+}
+
+.header-link-basket .header-icon {
+  position: absolute;
+  right: auto;
+  left: -18px;
+  margin: auto 0;
+}
+
+
+.header-link-login .header-icon {
+  position: absolute;
+  right: auto;
+  left: 0;
+  margin: auto 0;
 }
 
 /* Главная страница */
