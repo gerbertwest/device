@@ -138,20 +138,27 @@
 
                   <fieldset class="catalog-filter-group">
                     <legend class="catalog-filter-title">Стоимость</legend>
-                    <button class="range-toggle toggle-min" type="button">
-                      <span class="visually-hidden">Изменить минимальную цену.</span>
-                    </button>
-                    <button class="range-toggle toggle-max" type="button">
-                      <span class="visually-hidden">Изменить максимальную цену.</span>
-                    </button>
 
-                    <label class="catalog-filter-slider">
-                      от <input class="catalog-filter-input" type="number" name="min-price"> 0
-                    </label>
+                    <div class="range-scale">
+                      <div class="range-bar" style="left: 42px; width: 136px">
+                        <button class="range-toggle toggle-min" type="button">
+                          <span class="visually-hidden">Изменить минимальную цену.</span>
+                        </button>
+                        <button class="range-toggle toggle-max" type="button">
+                          <span class="visually-hidden">Изменить максимальную цену.</span>
+                        </button>
+                      </div>
+                    </div>
 
-                    <label class="catalog-filter-slider">
-                      до <input class="catalog-filter-input" type="number" name="max-price"> 5000
-                    </label>
+                    <div class="range-wrapper-inputs">
+                      <label class="range-input-label">
+                        от <input class="range-input" type="number" value="0" name="min-price">
+                      </label>
+
+                      <label class="range-input-label">
+                        до <input class="range-input" type="number" value="1000" name="max-price">
+                      </label>
+                    </div>
                   </fieldset>
 
                   <fieldset class="catalog-filter-group">
@@ -215,7 +222,7 @@
                     </ul>
                   </fieldset>
 
-                  <button class="button" type="submit">Показать</button>
+                  <button class="button filter-button" type="submit">Показать</button>
                 </form>
               </div>
 
