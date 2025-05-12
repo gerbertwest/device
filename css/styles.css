@@ -1374,6 +1374,16 @@ body {
   border-color: rgba(0, 0, 0, 0.5);
 }
 
+.range-toggle:focus::after {
+  position: absolute;
+  content: '';
+  top: -6px;
+  left: -6px;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #AF4FFF;
+}
+
 .range-toggle:active {
   background-color: #000000;
 }
@@ -1406,7 +1416,7 @@ body {
   line-height: 25px;
 }
 
-.range-input-label:first-child {
+.range-input-wrapper:first-child {
   margin-right: 40px;
 }
 
@@ -1419,12 +1429,17 @@ body {
   background-color: transparent;
   border: none;
   appearance:textfield;
+  outline: none;
 }
 
 .range-input::-webkit-outer-spin-button,
 .range-input::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.range-input-wrapper:has(.range-input:focus) {
+  outline: 2px solid #AF4FFF;
 }
 
 .control {
@@ -1552,7 +1567,31 @@ body {
 }
 
 .select-control {
+  width: 158px;
   margin-left: 197.5px;
+  font: inherit;
+  padding: 0;
+  padding-right: 20px;
+  background-image: url('../img/select-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 11px center;
+  appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+.select-control:hover {
+  opacity: 0.5;
+}
+
+.select-control:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.select-control:active {
+  opacity: 0.3;
+  outline: none;
 }
 
 .sorting-type-label {
