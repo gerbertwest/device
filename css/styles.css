@@ -1190,13 +1190,9 @@ body {
 .footer-navigation-link:active,
 .footer-contacts-address-phone:active,
 .htmlacademy-link:active,
-.navigation-logo:active
+.navigation-logo:active,
+.footer-social-link:active img
 {
-  opacity: 0.3;
-  outline: none;
-}
-
-.footer-social-link:active img {
   opacity: 0.3;
   outline: none;
 }
@@ -1671,9 +1667,9 @@ body {
   width: 220px;
   line-height: 20px;
   padding: 10px 0;
-  top: 50%;
+  top: 170px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   opacity: 0;
   pointer-events: none;
 }
