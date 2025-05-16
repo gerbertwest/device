@@ -81,6 +81,7 @@ body {
   margin: 0 auto;
   margin-top: 19.4px;
   position: relative;
+  z-index: 2;
 }
 
 .navigation {
@@ -95,8 +96,7 @@ body {
   top: 22.61px;
   left: 0;
   width: 100%;
-  z-index: 0;
-  height: 300px;
+  height: 163.39px;
 }
 
 .navigation-logo {
@@ -127,9 +127,6 @@ body {
 }
 
 .search-button {
-  /* display: inline-block;
-  box-sizing: border-box;
-  height: 40px; */
   padding: 8px 56px;
   font-family: "Rubik", sans-serif;
   font-size: 16px;
@@ -170,6 +167,7 @@ body {
   width: 293px;
   margin-left: 0;
   margin-right: auto;
+  position: relative;
 }
 
 .catalog-icon {
@@ -280,6 +278,42 @@ body {
   margin: auto 0;
 }
 
+.catalog-item:focus-within .subcatalog {
+  position: absolute;
+  display: block;
+  background-color: #FFE17F;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 33px;
+  width: 1040px;
+  min-height: 145px;
+  top: 30px;
+  left: -60px;
+  list-style-type: none;
+  display: flex;
+  column-gap: 50px;
+  z-index: -1;
+}
+
+.subcatalog {
+  display: none;
+}
+
+.subcatalog-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px
+}
+
+.subcatalog-link {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #000000;
+  text-decoration: none;
+}
+
 /*Отработка состояний header*/
 
 .catalog-link:hover .catalog-icon{
@@ -300,6 +334,21 @@ body {
 .catalog-link:focus
 {
   outline: 2px solid #AF4FFF;
+}
+
+.catalog-link:focus .catalog-icon {
+  opacity: 0;
+}
+
+.catalog-link:focus-within::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 51px;
+  top: 0;
+  right: 0;
+  background-image: url('../img/catalog-open.svg');
+  background-repeat: no-repeat;
 }
 
 .search-button:focus, .search-text-field:focus {
@@ -331,7 +380,20 @@ body {
 .page-container {
   width: 1160px;
   margin: 0 auto;
+  position: relative;
 }
+
+.main-page-container::after {
+  content: '';
+  background: #FFE17F;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  height: 136.61px;
+}
+
 
 .index-columns {
   display: flex;
