@@ -416,36 +416,44 @@
         </section>
       </div>
     </footer>
-    <div class="modal-container modal-container-close">
+    <div class="modal-container">
       <div class="modal modal-delivery">
-        <button class="modal-close-button">
+        <button class="modal-close-button" type="button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
           <h2 class="modal-title">Доставка под заказ</h2>
           <form class="delivery-form" action="https://echo.htmlacademy.ru/" method="post">
-            <p class="field-group">
+            <p class="field-group delivery-form-name">
               <label class="delivery-form-label" for="delivery-name">Ваше имя:</label>
               <input class="delivery-form-field field" type="text" id="delivery-name" name="delivery-name" placeholder="Введите имя">
             </p>
-            <p class="field-group">
+            <p class="field-group delivery-form-email">
               <label class="delivery-form-label" for="delivery-email">Ваш e-mail:</label>
               <input class="delivery-form-field field" type="email" id="delivery-email" name="delivery-imail" placeholder="почта" required>
             </p>
-            <p class="field-group">
+            <p class="field-group delivery-form-object">
               <label class="delivery-form-label" for="delivery-object">Что нужно привезти:</label>
               <input class="delivery-form-field field" type="text" id="delivery-object" name="delivery-object" placeholder="В свободной форме" required>
             </p>
-            <p class="field-group">
-                <span class="form-label form-label-icon">
-                  <label for="delivery-form-label" for="delivery-number">Количество:</label>
-                  <button class="info" type="button">
-                    <span class="visually-hidden">Посмотреть дополнительную информацию</span>
-                  </button>
-                </span>
-                <input class="delivery-form-field field" type="number" id="delivery-number" name="delivery-number" value="1">
-              </p>
-              <button class="button appointment-submit" type="submit">Отправить</button>
+            <p class="field-group delivery-form-number">
+              <span class="form-label form-label-icon">
+                <label class="delivery-form-label" for="delivery-number">Количество:</label>
+                <button class="info" type="button">
+                  <span class="visually-hidden">Посмотреть дополнительную информацию</span>
+                </button>
+              </span>
+              <span class="delivery-form-wraper">
+                <button class="delivery-form-button button-down" type="button">
+                  <span class="visually-hidden">Кнопка +</span>
+                </button>
+                <input class="delivery-form-field-number field" type="number" id="delivery-number" name="delivery-number" value="1">
+                <button class="delivery-form-button button-up" type="button">
+                  <span class="visually-hidden">Кнопка -</span>
+                </button>
+              </span>
+            </p>
+            <button class="button appointment-submit" type="submit">Отправить</button>
           </form>
         </section>
       </div>
