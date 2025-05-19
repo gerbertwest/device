@@ -146,6 +146,10 @@ body {
   margin-left: auto;
 }
 
+.header-item {
+  position: relative;
+}
+
 .header-item:first-child {
   margin-right: 18px;
 }
@@ -2098,6 +2102,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   text-align: left;
+  z-index: 1;
 }
 
 .modal-info-button:hover::before, .modal-info-button:focus::before {
@@ -2215,4 +2220,82 @@ body {
 
 .field-email:invalid + .email-error-info {
   opacity: 1;
+}
+
+/* Поповер */
+
+.popover {
+  position: absolute;
+  box-sizing: border-box;
+  top: 46px;
+  left: -126px;
+  z-index: 1;
+  width: 320px;
+  padding: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  background-color: #000000;
+  min-height: 90px;
+}
+
+.popover-content {
+  position: relative;
+  height: 100%;
+}
+
+.popover-content::before {
+  position: absolute;
+  content: '';
+  background-image: url('../img/triangle.svg');
+  top: -26px;
+  left: 140px;
+  width: 14px;
+  height: 6px;
+  background-repeat: no-repeat;
+}
+
+.cart-items-list {
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.cart-item:last-child {
+  margin-bottom: 20px;
+}
+
+.cart-item-title {
+  margin: 0;
+}
+
+.cart-item-image {
+  margin-right: 23px;
+}
+
+.cart-item-button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  align-self: start;
+  margin-left: auto;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  background-color: #1A1A1A;
+  margin-bottom: 20px;
+}
+
+.cart-button {
+  padding: 14.5px 0;
+  width: 280px;
 }
