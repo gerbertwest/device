@@ -1583,7 +1583,7 @@ body {
 .catalog-filter-slider {
   font-size: 15px;
   color: #000000;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .filter-container {
@@ -1851,7 +1851,7 @@ body {
   display: block;
   box-sizing: border-box;
   color: #444444;
-  opacity: 30%;
+  opacity: 0.3;
   background-color: #F0F0F0;
   text-decoration: none;
   font-size: 16px;
@@ -1952,6 +1952,18 @@ body {
   cursor: pointer;
 }
 
+.modal-close-button:hover {
+  opacity: 0.6;
+}
+
+.modal-close-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+.modal-close-button:active {
+  opacity: 0.3;
+}
+
 .modal-title {
   margin: 0;
   margin-bottom: 42px;
@@ -2015,13 +2027,34 @@ body {
   grid-column: 2 / 4;
 }
 
-.field {
+.modal-field, .field-number {
   border: none;
   margin: 0;
   padding: 20px;
   font: inherit;
   background-color: #F0F0F0;
   line-height: 20px;
+  outline: none;
+}
+
+.modal-field::placeholder {
+  color: #000000;
+  opacity: 0.3;
+}
+
+.modal-field:hover {
+  background-color: #DCDCDC;
+}
+
+.modal-field:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.modal-field:disabled,
+.modal-field:disabled:hover {
+  opacity: 0.3;
+  background: none;
 }
 
 .form-label-icon {
@@ -2031,7 +2064,7 @@ body {
   margin-bottom: 14px;
 }
 
-.info {
+.modal-info-button {
   position: absolute;
   width: 26px;
   height: 26px;
@@ -2048,34 +2081,59 @@ body {
   cursor: pointer;
 }
 
-.delivery-form-name,
-.delivery-form-email
-{
-  position: relative;
+.modal-info-button:focus {
+  outline: none;
 }
 
-.delivery-form-name::after {
+.modal-info-button:hover::after, .modal-info-button:focus::after {
+  content: 'Постараемся найти, сколько нужно. Привезём сколько получится по требованиям к провозу багажа.';
   position: absolute;
+  width: 164px;
+  height: 141px;
+  top: 33px;
+  right: -34px;
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 19px 17px 0 19px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: left;
+}
+
+.modal-info-button:hover::before, .modal-info-button:focus::before {
   content: '';
-  width: 13px;
-  height: 12px;
+  position: absolute;
+  width: 14px;
+  height: 6px;
+  top: 27px;
+  right: 6px;
+  background-image: url('../img/triangle.svg');
+  background-repeat: no-repeat;
+}
+
+.field-name {
   background-image: url('../img/form-name-icon.svg');
-  top: 58px;
-  right: 21px;
+  background-repeat: no-repeat;
+  background-size: 13px 12px;
+  background-position: right 21px center;
+  padding-right: 44px;
 }
 
-.delivery-form-email::after {
-  position: absolute;
-  content: '';
-  width: 13px;
-  height: 12px;
+.field-email {
   background-image: url('../img/form-email-icon.svg');
-  top: 58px;
-  right: 21px;
+  background-repeat: no-repeat;
+  background-size: 15px 12px;
+  background-position: right 20px center;
+  padding-right: 44px;
 }
 
 .delivery-form-wraper {
   display: flex;
+}
+
+.delivery-form-wraper:has(.field-number:invalid)  {
+  box-shadow: none;
+  outline: 2px solid #FF3D3D;
 }
 
 .button-up, .button-down {
@@ -2088,16 +2146,20 @@ body {
   cursor: pointer;
 }
 
-.delivery-form-field-number {
+.field-number {
   width: 60px;
   padding: 0;
   text-align: center;
 }
 
-.delivery-form-field-number::-webkit-outer-spin-button,
-.delivery-form-field-number::-webkit-inner-spin-button {
+.field-number::-webkit-outer-spin-button,
+.field-number::-webkit-inner-spin-button {
   appearance: none;
   margin: 0;
+}
+
+.delivery-form-button {
+  background-color: #F0F0F0;
 }
 
 .delivery-form-button::before,
@@ -2111,6 +2173,46 @@ body {
   background-color: #000000;
 }
 
+.delivery-form-button:hover {
+  background-color: #EBEBEB;
+}
+
+.delivery-form-button:hover::before,
+.button-up:hover::after {
+  opacity: 0.6;
+}
+
+.delivery-form-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
+.delivery-form-button:active::before,
+.button-up:active::after {
+  opacity: 0.3;
+}
+
 .button-up::after {
   transform: rotate(90deg);
+}
+
+.name-error-info {
+  font-size: 14px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.email-error-info {
+  font-size: 14px;
+  line-height: 20px;
+  color: #FF3D3D;
+  opacity: 0;
+}
+
+.modal-field:invalid {
+  box-shadow: none;
+  outline: 2px solid #FF3D3D;
+}
+
+.field-email:invalid + .email-error-info {
+  opacity: 1;
 }
