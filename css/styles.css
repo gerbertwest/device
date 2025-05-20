@@ -1934,7 +1934,8 @@ body {
   padding: 72px 80px;
   background-color: #FFFFFF;
   box-sizing: border-box;
-  outline: 10px solid #000000;
+  border: 10px solid #000000;
+  box-shadow: 0 10px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .modal-delivery {
@@ -2103,6 +2104,7 @@ body {
   line-height: 20px;
   text-align: left;
   z-index: 1;
+  box-shadow: 0 10px 0px 0px rgba(0, 0, 0, 0.1);
 }
 
 .modal-info-button:hover::before, .modal-info-button:focus::before {
@@ -2237,6 +2239,11 @@ body {
   color: white;
   background-color: #000000;
   min-height: 90px;
+  display: none;
+}
+
+.popover-open {
+  display: block;
 }
 
 .popover-content {
@@ -2249,7 +2256,7 @@ body {
   content: '';
   background-image: url('../img/triangle.svg');
   top: -26px;
-  left: 140px;
+  left: 133px;
   width: 14px;
   height: 6px;
   background-repeat: no-repeat;
@@ -2262,9 +2269,32 @@ body {
 
 .cart-item {
   display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 40px;
+}
+
+.cart-item-link {
+  display: flex;
   flex-direction: row;
   padding: 0;
-  margin-bottom: 40px;
+  text-decoration: none;
+  color: inherit;
+  width: 220px;
+}
+
+.cart-item-link:hover {
+  opacity: 0.6;
+}
+
+.cart-item-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.cart-item-link:active {
+  opacity: 0.3;
 }
 
 .cart-item:last-child {
@@ -2286,6 +2316,40 @@ body {
   margin: 0;
   align-self: start;
   margin-left: auto;
+  cursor: pointer;
+  width: 10px;
+  height: 10px;
+  position: relative;
+}
+
+.cart-item-button::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-image: url('../img/close-button.svg');
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  outline: none;
+}
+
+.cart-item-button:hover::before {
+  opacity: 0.6;
+}
+
+.cart-item-button:focus-visible {
+  outline: none
+}
+
+.cart-item-button:focus::before {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.cart-item-button:active::before {
+  opacity: 0.3;
 }
 
 .cart-total {
@@ -2298,4 +2362,25 @@ body {
 .cart-button {
   padding: 14.5px 0;
   width: 280px;
+}
+
+.cart-button:hover {
+  background-color: #FFE17F;
+}
+
+.cart-button:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.cart-button:active .cart-button-title {
+  opacity: 0.3;
+}
+
+.cart-button:disabled {
+  background-color: #FFFFFF;
+}
+
+.cart-button:disabled .cart-button-title {
+  opacity: 0.3;
 }
