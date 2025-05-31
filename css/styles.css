@@ -92,6 +92,7 @@ img {
 .navigation {
   position: relative;
   z-index: 1;
+  min-height: 170px;
 }
 
 .page-header.main-header::after {
@@ -146,7 +147,7 @@ img {
 
 .header-list {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   max-width: 240px;
   margin-left: auto;
 }
@@ -161,7 +162,7 @@ img {
 
 .navigation-list {
   padding: 0;
-  justify-content: space-between;
+  justify-content: flex-end;
   list-style-type: none;
   margin-bottom: 0;
 }
@@ -291,15 +292,14 @@ img {
 .catalog-item:focus-within .subcatalog {
   position: absolute;
   background-color: #ffe17f;
-  padding-left: 60px;
-  padding-right: 60px;
-  padding-top: 33px;
+  padding: 33px 60px 10px 60px;
   width: 1040px;
-  min-height: 145px;
+  min-height: 135px;
   top: 30px;
   left: -60px;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   column-gap: 50px;
   z-index: -1;
 }
@@ -313,6 +313,7 @@ img {
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
+  padding-bottom: 20px;
 }
 
 .subcatalog-link {
@@ -569,6 +570,7 @@ img {
 .promo-product-feature {
   margin: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -735,7 +737,7 @@ img {
 .description {
   padding: 72.5px 63px 72.5px 116px;
   display: grid;
-  grid-template-columns: 1fr 110px 136px;
+  grid-template-columns: 452px 106px 136px;
   grid-template-rows: auto 34px auto;
 }
 
@@ -1126,6 +1128,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 444px;
 }
 
 .footer-contacts {
@@ -1189,6 +1192,7 @@ img {
 
 .footer-social-item {
   margin-right: 15px;
+  margin-bottom: 5px;
   width: 40px;
   height: 40px;
 }
@@ -1321,6 +1325,7 @@ img {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   color: #000000;
@@ -1376,10 +1381,6 @@ img {
   padding: 0;
   margin: 0;
   list-style-type: none;
-}
-
-.catalog-filter-item {
-  height: 20px;
 }
 
 .catalog-filter-item:not(:last-child) {
@@ -1536,7 +1537,7 @@ img {
   display: block;
   padding-left: 36px;
   line-height: 20px;
-  height: 20px;
+  font-size: 16px;
 }
 
 .control:hover {
@@ -1884,6 +1885,7 @@ img {
 
 .pagination {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   padding: 0;
